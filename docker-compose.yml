@@ -1,0 +1,46 @@
+version: "3.7"
+
+services:
+    # Database
+    nextpress.mysql:
+        container_name: ${NEXTPRESS_MYSQL_CONTAINER:-nextpress.mysql}
+        image: mysql:5.7
+        restart: always
+        ports:
+            - 33066:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: ${NEXTPRESS_MYSQL_ROOT_PASSWORD:-password}
+            MYSQL_DATABASE: ${NEXTPRESS_DB_NAME:-nextpress_database}
+            MYSQL_USER: ${NEXTPRESS_MYSQL_USER:-nextpressadmin}
+            MYSQL_PASSWORD: ${NEXTPRESS_MYSQL_PASSWORD:-nextpassword}
+        ## if switch to just using .env file
+        # env_file:
+        #   - ./env/db.env
+        networks:
+            - wpsite
+
+    nextpress.fwp:
+        container_name: ${NEXTPRESS_WP_CONTAINER:-nextpress.fwp}
+        build:
+            context: ./backend/docker
+        restart: always
+        depends_on:
+            - ${NEXTPRESS_MYSQL_CONTAINER:-nextpress.mysql}
+        ports:
+            - "${NEXTPRESS_WP_PORT:-3080}:80"
+        environment:
+            NEXTPRESS_WP_PORT: ${NEXTPRESS_WP_PORT:-3080}
+            WORDPRESS_DB_HOST: ${NEXTPRESS_DB_HOST:-nextpress.mysql:3306}
+            WORDPRESS_DB_USER: ${NEXTPRESS_DB_USER:-nextpressadmin}
+            WORDPRESS_DB_PASSWORD: ${NEXTPRESS_DB_PASSWORD:-nextpassword}
+            WORDPRESS_DB_NAME: ${NEXTPRESS_DB_NAME:-nextpress_database}
+        volumes:
+            - wordpress:/var/www/html
+        networks:
+            - wpsite
+
+networks:
+    wpsite:
+
+volumes:
+    wordpress:
