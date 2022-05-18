@@ -1,0 +1,12 @@
+node_modules
+dist
+*.zip
+.idea
+.DS_Store
+process.yml
+.next
+.env
+.env.*
+!.env.local.sample
+build/
+/frontend/package-lock.json

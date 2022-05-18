@@ -12,7 +12,7 @@ function Header({
   title = 'Headless by WP Engine',
   description,
 }: Props): JSX.Element {
-  const { menuItems } = client.useQuery()
+  const { menuItems } = client.useQuery();
   const links = menuItems({
     where: { location: MenuLocationEnum.PRIMARY },
   }).nodes;
@@ -41,7 +41,8 @@ function Header({
               <Link href="https://github.com/wpengine/faustjs">
                 <a
                   className="button"
-                  href="https://github.com/wpengine/faustjs">
+                  href="https://github.com/wpengine/faustjs"
+                >
                   GitHub
                 </a>
               </Link>

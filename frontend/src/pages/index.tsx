@@ -41,12 +41,9 @@ export default function Page() {
           id={styles.home_hero}
         >
           <p>
-            WP&nbsp;Engine’s Faust.js Framework includes this example
-            project, the{' '}
-            <a href="https://wordpress.org/plugins/faustwp/">
-              FaustWP plugin
-            </a>
-            ,{' '}
+            WP&nbsp;Engine’s Faust.js Framework includes this example project,
+            the{' '}
+            <a href="https://wordpress.org/plugins/faustwp/">FaustWP plugin</a>,{' '}
             <a href="https://github.com/wpengine/faustjs">headless packages</a>,
             and{' '}
             <a href="https://faustjs.org/docs/tutorial/dev-env-setup">

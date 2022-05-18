@@ -1,0 +1,34 @@
+{
+    "name": "nextpress",
+    "version": "1.0.0",
+    "description": "nextjs + wordpress ( faustwp )",
+    "engines": {
+        "node": ">=14.0.0",
+        "npm": ">=6.0.0"
+    },
+    "workspaces": {
+        "packages": [
+            "frontend",
+            "backend"
+        ]
+    },
+    "scripts": {
+        "build": "npm run build --workspace=frontend",
+        "dev": "npm run build && npm run dev --workspace=frontend",
+        "clean:examples": "rimraf frontend/**/node_modules",
+        "changeset": "changeset",
+        "version": "changeset version && node scripts/versionPlugin.js",
+        "version:status": "changeset status",
+        "release": "npm run build && changeset publish",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.17.0",
+        "@commitlint/cli": "^17.0.0",
+        "@commitlint/config-conventional": "^17.0.0",
+        "husky": "^8.0.1",
+        "rimraf": "^3.0.2"
+    },
+    "author": "christophercheok",
+    "license": "MIT"
+}

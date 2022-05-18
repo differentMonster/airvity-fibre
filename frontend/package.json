@@ -20,13 +20,15 @@
     "test:e2e:run": "start-server-and-test start http://localhost:3000 cy:run",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 cy:open",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prettier": "prettier --write . "
   },
   "dependencies": {
     "@faustjs/core": "^0.15.4",
     "@faustjs/next": "^0.15.5",
     "next": "^12.1.0",
     "normalize.css": "^8.0.1",
+    "prettier": "^2.6.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass": "^1.44.0",

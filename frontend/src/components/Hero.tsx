@@ -27,7 +27,8 @@ function Hero({
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...(id && { id })}
       style={{ backgroundImage: bgImage ? `url(${bgImage})` : 'none' }}
-      className={styles.hero}>
+      className={styles.hero}
+    >
       <div className={styles.wrap}>
         <h1>{title}</h1>
         <div className={styles.intro}>

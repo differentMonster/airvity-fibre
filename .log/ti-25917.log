@@ -1,0 +1,84 @@
+[02:45:11.041] Global cache location '/home/monster/spacemacs/.cache/typescript/4.6', safe file path '/usr/lib/node_modules/typescript/lib/typingSafeList.json', types map path /usr/lib/node_modules/typescript/lib/typesMap.json
+[02:45:11.042] Processing cache location '/home/monster/spacemacs/.cache/typescript/4.6'
+[02:45:11.042] Trying to find '/home/monster/spacemacs/.cache/typescript/4.6/package.json'...
+[02:45:11.042] Loaded content of '/home/monster/spacemacs/.cache/typescript/4.6/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.593"},"devDependencies":{"@types/eslint":"^8.4.2","@types/isomorphic-fetch":"^0.0.36","@types/node":"^17.0.33","@types/react":"^18.0.9","@types/react-dom":"^18.0.4"}}
+[02:45:11.042] Loaded content of '/home/monster/spacemacs/.cache/typescript/4.6/package-lock.json'
+[02:45:11.050] Adding entry into typings cache: 'eslint' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/eslint/index.d.ts'
+[02:45:11.052] Adding entry into typings cache: 'isomorphic-fetch' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/isomorphic-fetch/index.d.ts'
+[02:45:11.055] Adding entry into typings cache: 'node' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/node/index.d.ts'
+[02:45:11.063] Adding entry into typings cache: 'react' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/react/index.d.ts'
+[02:45:11.064] Adding entry into typings cache: 'react-dom' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/react-dom/index.d.ts'
+[02:45:11.064] Finished processing cache location '/home/monster/spacemacs/.cache/typescript/4.6'
+[02:45:11.064] Process id: 25924
+[02:45:11.064] NPM location: /usr/bin/npm (explicit '--npmLocation' not  provided)
+[02:45:11.064] validateDefaultNpmLocation: false
+[02:45:11.065] Npm config file: /home/monster/spacemacs/.cache/typescript/4.6/package.json
+[02:45:11.065] Updating types-registry npm package...
+[02:45:11.065] Exec: /usr/bin/npm install --ignore-scripts types-registry@latest
+[02:45:12.577]     Succeeded. stdout:
+    
+    up to date, audited 12 packages in 1s
+
+found 0 vulnerabilities
+
+[02:45:12.577] Updated types-registry npm package
+[02:45:12.615] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["/usr/lib/node_modules/typescript/lib/lib.es5.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","/usr/lib/node_modules/typescript/lib/lib.scripthost.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.core.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.full.d.ts","/home/monster/app/nextpress/commitlint.config.js"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/monster/app/nextpress","kind":"discover"}
+[02:45:12.630] Loaded safelist from types map file '/usr/lib/node_modules/typescript/lib/typesMap.json'
+[02:45:12.631] Explicitly included types: []
+[02:45:12.632] Typing names in '/home/monster/app/nextpress/package.json' dependencies: ["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky","rimraf"]
+[02:45:12.632] Searching for typing names in /home/monster/app/nextpress/node_modules; all files: ["/home/monster/app/nextpress/node_modules/@changesets/cli/package.json","/home/monster/app/nextpress/node_modules/@commitlint/cli/package.json","/home/monster/app/nextpress/node_modules/@commitlint/config-conventional/package.json","/home/monster/app/nextpress/node_modules/husky/package.json","/home/monster/app/nextpress/node_modules/rimraf/package.json"]
+[02:45:12.636]     Found package names: ["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky","rimraf"]
+[02:45:12.637] Inferred typings from unresolved imports: []
+[02:45:12.637] Result: {"cachedTypingPaths":[],"newTypingNames":["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky","rimraf"],"filesToWatch":["/home/monster/app/nextpress/bower_components","/home/monster/app/nextpress/package.json","/home/monster/app/nextpress/node_modules"]}
+[02:45:12.637] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky","rimraf"],"filesToWatch":["/home/monster/app/nextpress/bower_components","/home/monster/app/nextpress/package.json","/home/monster/app/nextpress/node_modules"]}
+[02:45:12.637] DirectoryWatcher:: Added:: WatchInfo: /home/monster/app/nextpress/bower_components
+[02:45:12.638] DirectoryWatcher:: Added:: WatchInfo: /home/monster/app/nextpress/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[02:45:12.639] Elapsed:: 1.2983900010585785ms DirectoryWatcher:: Added:: WatchInfo: /home/monster/app/nextpress/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[02:45:12.639] FileWatcher:: Added:: WatchInfo: /home/monster/app/nextpress/package.json
+[02:45:12.639] FileWatcher:: Added:: WatchInfo: /home/monster/app/nextpress/package.json 2000 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[02:45:12.639] DirectoryWatcher:: Added:: WatchInfo: /home/monster/app/nextpress/node_modules
+[02:45:12.639] DirectoryWatcher:: Added:: WatchInfo: /home/monster/app/nextpress/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[02:45:12.691] Elapsed:: 51.04285899922252ms DirectoryWatcher:: Added:: WatchInfo: /home/monster/app/nextpress/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[02:45:12.691] Installing typings ["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky","rimraf"]
+[02:45:12.691] '@changesets/cli':: Entry for package 'changesets__cli' does not exist in local types registry - skipping...
+[02:45:12.691] '@commitlint/cli':: Entry for package 'commitlint__cli' does not exist in local types registry - skipping...
+[02:45:12.691] '@commitlint/config-conventional':: Entry for package 'commitlint__config-conventional' does not exist in local types registry - skipping...
+[02:45:12.691] 'husky':: Entry for package 'husky' does not exist in local types registry - skipping...
+[02:45:12.691] Npm config file: /home/monster/spacemacs/.cache/typescript/4.6/package.json
+[02:45:12.691] Sending response:
+    {"kind":"event::beginInstallTypes","eventId":1,"typingsInstallerVersion":"4.6.4","projectName":"/dev/null/inferredProject1*"}
+[02:45:12.691] Response has been sent.
+[02:45:12.691] #1 with arguments'["@types/rimraf@ts4.6"]'.
+[02:45:12.692] Exec: /usr/bin/npm install --ignore-scripts @types/rimraf@ts4.6 --save-dev --user-agent="typesInstaller/4.6.4"
+[02:45:14.357]     Succeeded. stdout:
+    
+    added 3 packages, and audited 15 packages in 1s
+
+found 0 vulnerabilities
+
+[02:45:14.357] npm install #1 took: 1666 ms
+[02:45:14.358] Installed typings ["@types/rimraf@ts4.6"]
+[02:45:14.359] Installed typing files ["/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/rimraf/index.d.ts"]
+[02:45:14.359] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":["/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/rimraf/index.d.ts"],"unresolvedImports":[],"kind":"action::set"}
+[02:45:14.359] Response has been sent.
+[02:45:14.359] Sending response:
+    {"kind":"event::endInstallTypes","eventId":1,"projectName":"/dev/null/inferredProject1*","packagesToInstall":["@types/rimraf@ts4.6"],"installSuccess":true,"typingsInstallerVersion":"4.6.4"}
+[02:45:14.359] Response has been sent.
+[02:45:14.704] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["/usr/lib/node_modules/typescript/lib/lib.es5.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.d.ts","/usr/lib/node_modules/typescript/lib/lib.dom.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","/usr/lib/node_modules/typescript/lib/lib.scripthost.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.core.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts","/usr/lib/node_modules/typescript/lib/lib.es2016.full.d.ts","/home/monster/app/nextpress/commitlint.config.js","/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/rimraf/index.d.ts"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/monster/app/nextpress","kind":"discover"}
+[02:45:14.704] Explicitly included types: []
+[02:45:14.705] Typing names in '/home/monster/app/nextpress/package.json' dependencies: ["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky","rimraf"]
+[02:45:14.705] Searching for typing names in /home/monster/app/nextpress/node_modules; all files: ["/home/monster/app/nextpress/node_modules/@changesets/cli/package.json","/home/monster/app/nextpress/node_modules/@commitlint/cli/package.json","/home/monster/app/nextpress/node_modules/@commitlint/config-conventional/package.json","/home/monster/app/nextpress/node_modules/husky/package.json","/home/monster/app/nextpress/node_modules/rimraf/package.json"]
+[02:45:14.709]     Found package names: ["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky","rimraf"]
+[02:45:14.709] Inferred typings from unresolved imports: []
+[02:45:14.709] Result: {"cachedTypingPaths":["/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/rimraf/index.d.ts"],"newTypingNames":["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky"],"filesToWatch":["/home/monster/app/nextpress/bower_components","/home/monster/app/nextpress/package.json","/home/monster/app/nextpress/node_modules"]}
+[02:45:14.709] Finished typings discovery: {"cachedTypingPaths":["/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/rimraf/index.d.ts"],"newTypingNames":["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky"],"filesToWatch":["/home/monster/app/nextpress/bower_components","/home/monster/app/nextpress/package.json","/home/monster/app/nextpress/node_modules"]}
+[02:45:14.709] Installing typings ["@changesets/cli","@commitlint/cli","@commitlint/config-conventional","husky"]
+[02:45:14.709] '@changesets/cli':: Entry for package 'changesets__cli' does not exist in local types registry - skipping...
+[02:45:14.709] '@commitlint/cli':: Entry for package 'commitlint__cli' does not exist in local types registry - skipping...
+[02:45:14.709] '@commitlint/config-conventional':: Entry for package 'commitlint__config-conventional' does not exist in local types registry - skipping...
+[02:45:14.709] 'husky':: Entry for package 'husky' does not exist in local types registry - skipping...
+[02:45:14.709] All typings are known to be missing or invalid - no need to install more typings
+[02:45:14.710] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":["/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/rimraf/index.d.ts"],"unresolvedImports":[],"kind":"action::set"}
+[02:45:14.710] Response has been sent.

@@ -1,0 +1,24 @@
+[02:26:30.751] Global cache location '/home/monster/spacemacs/.cache/typescript/4.6', safe file path '/usr/lib/node_modules/typescript/lib/typingSafeList.json', types map path /usr/lib/node_modules/typescript/lib/typesMap.json
+[02:26:30.751] Processing cache location '/home/monster/spacemacs/.cache/typescript/4.6'
+[02:26:30.751] Trying to find '/home/monster/spacemacs/.cache/typescript/4.6/package.json'...
+[02:26:30.752] Loaded content of '/home/monster/spacemacs/.cache/typescript/4.6/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.592"},"devDependencies":{"@types/eslint":"^8.4.2","@types/isomorphic-fetch":"^0.0.36","@types/node":"^17.0.33","@types/react":"^18.0.9","@types/react-dom":"^18.0.4"}}
+[02:26:30.752] Loaded content of '/home/monster/spacemacs/.cache/typescript/4.6/package-lock.json'
+[02:26:30.761] Adding entry into typings cache: 'eslint' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/eslint/index.d.ts'
+[02:26:30.762] Adding entry into typings cache: 'isomorphic-fetch' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/isomorphic-fetch/index.d.ts'
+[02:26:30.765] Adding entry into typings cache: 'node' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/node/index.d.ts'
+[02:26:30.771] Adding entry into typings cache: 'react' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/react/index.d.ts'
+[02:26:30.772] Adding entry into typings cache: 'react-dom' => '/home/monster/spacemacs/.cache/typescript/4.6/node_modules/@types/react-dom/index.d.ts'
+[02:26:30.772] Finished processing cache location '/home/monster/spacemacs/.cache/typescript/4.6'
+[02:26:30.772] Process id: 49280
+[02:26:30.772] NPM location: /usr/bin/npm (explicit '--npmLocation' not  provided)
+[02:26:30.772] validateDefaultNpmLocation: false
+[02:26:30.772] Npm config file: /home/monster/spacemacs/.cache/typescript/4.6/package.json
+[02:26:30.772] Updating types-registry npm package...
+[02:26:30.772] Exec: /usr/bin/npm install --ignore-scripts types-registry@latest
+[02:26:32.068]     Succeeded. stdout:
+    
+    up to date, audited 12 packages in 1s
+
+found 0 vulnerabilities
+
+[02:26:32.068] Updated types-registry npm package

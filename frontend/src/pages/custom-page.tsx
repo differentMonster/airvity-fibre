@@ -28,7 +28,8 @@ export default function Page() {
             <a
               href="https://nextjs.org/docs/basic-features/pages"
               target="_blank"
-              rel="noreferrer">
+              rel="noreferrer"
+            >
               Next.js
             </a>
             . Take a look at <code>src/pages/custom-page.tsx</code> for an

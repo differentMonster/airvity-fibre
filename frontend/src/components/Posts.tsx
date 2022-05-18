@@ -38,7 +38,8 @@ function Posts({
             <div
               className={styles.single}
               key={post.id ?? ''}
-              id={`post-${post.id}`}>
+              id={`post-${post.id}`}
+            >
               <div>
                 <Heading level={postTitleLevel} className={styles.title}>
                   <Link href={`/posts/${post.slug}`}>
