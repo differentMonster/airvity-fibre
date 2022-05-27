@@ -1,5 +1,5 @@
 {
-  "name": "next-headless-getting-started",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "clean": "rimraf .next node_modules",
-    "lint": "next lint",
+    "lint": "eslint --ignore-pattern node_modules/ && npm run prettier",
     "generate": "gqty generate",
     "wpe-build": "next build",
     "cy:open": "cypress open --browser chromium",
@@ -26,13 +26,15 @@
   "dependencies": {
     "@faustjs/core": "^0.15.4",
     "@faustjs/next": "^0.15.5",
-    "next": "^12.1.0",
+    "next": "^12.1.6",
     "normalize.css": "^8.0.1",
     "prettier": "^2.6.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "sass": "^1.44.0",
-    "sharp": "^0.30.1"
+    "sharp": "^0.30.1",
+    "@react-three/fiber": "^8.0.19",
+    "three": "^0.141.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.12",
@@ -53,8 +55,13 @@
     "dotenv-flow": "3.2.0",
     "eslint": "^8.4.1",
     "eslint-config-next": "^12.0.7",
+    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-storybook": "^0.5.12",
     "rimraf": "^3.0.2",
     "start-server-and-test": "^1.14.0",
     "typescript": "^4.5.2"
+  },
+  "resolutions": {
+    "webpack": "^5"
   }
 }

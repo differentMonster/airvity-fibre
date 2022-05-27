@@ -14,8 +14,10 @@
     },
     "scripts": {
         "build": "npm run build --workspace=frontend",
+        "lint": "npm run lint --workspace=frontend",
         "dev": "npm run build && npm run dev --workspace=frontend",
-        "clean:examples": "rimraf frontend/**/node_modules",
+        "clean": "rimraf node_modules",
+        "clean:frontend": "rimraf frontend/**/node_modules",
         "changeset": "changeset",
         "version": "changeset version && node scripts/versionPlugin.js",
         "version:status": "changeset status",
