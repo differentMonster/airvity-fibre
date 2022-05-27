@@ -1,4 +1,4 @@
-version: "3.7"
+version: '3.7'
 
 services:
     # Database
@@ -10,15 +10,31 @@ services:
             - 33066:3306
         environment:
             MYSQL_ROOT_PASSWORD: ${NEXTPRESS_MYSQL_ROOT_PASSWORD:-password}
-            MYSQL_DATABASE: ${NEXTPRESS_DB_NAME:-nextpress_database}
-            MYSQL_USER: ${NEXTPRESS_MYSQL_USER:-nextpressadmin}
-            MYSQL_PASSWORD: ${NEXTPRESS_MYSQL_PASSWORD:-nextpassword}
-        ## if switch to just using .env file
+            MYSQL_DATABASE: ${NEXTPRESS_DB_NAME:-airvityfibre_database}
+            MYSQL_USER: ${NEXTPRESS_MYSQL_USER:-airvityfibre}
+            MYSQL_PASSWORD: ${NEXTPRESS_MYSQL_PASSWORD:-fibrepassword}
+        # if switch to just using .env file
         # env_file:
-        #   - ./env/db.env
+        #     - ./env/db.env
         networks:
             - wpsite
 
+    # phpmyadmin
+    nextpress.phpmyadmin:
+        container_name: ${NUXTPRESS_PHPMYADMIN_CONTAINER:-nextpress.phpmyadmin}
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        depends_on:
+            - ${NUXTPRESS_MYSQL_CONTAINER:-nextpress.mysql}
+        ports:
+            - '8080:80'
+        environment:
+            PMA_HOST: ${NUXTPRESS_MYSQL_CONTAINER:-nextpress.mysql}
+            MYSQL_ROOT_PASSWORD: ${NUXTPRESS_MYSQL_ROOT_PASSWORD:-password}
+        networks:
+            - wpsite
+
+    # wordpress
     nextpress.fwp:
         container_name: ${NEXTPRESS_WP_CONTAINER:-nextpress.fwp}
         build:
@@ -27,13 +43,13 @@ services:
         depends_on:
             - ${NEXTPRESS_MYSQL_CONTAINER:-nextpress.mysql}
         ports:
-            - "${NEXTPRESS_WP_PORT:-3080}:80"
+            - '${NEXTPRESS_WP_PORT:-3080}:80'
         environment:
             NEXTPRESS_WP_PORT: ${NEXTPRESS_WP_PORT:-3080}
             WORDPRESS_DB_HOST: ${NEXTPRESS_DB_HOST:-nextpress.mysql:3306}
-            WORDPRESS_DB_USER: ${NEXTPRESS_DB_USER:-nextpressadmin}
-            WORDPRESS_DB_PASSWORD: ${NEXTPRESS_DB_PASSWORD:-nextpassword}
-            WORDPRESS_DB_NAME: ${NEXTPRESS_DB_NAME:-nextpress_database}
+            WORDPRESS_DB_USER: ${NEXTPRESS_DB_USER:-airvityfibre}
+            WORDPRESS_DB_PASSWORD: ${NEXTPRESS_DB_PASSWORD:-fibrepassword}
+            WORDPRESS_DB_NAME: ${NEXTPRESS_DB_NAME:-airvityfibre_database}
         volumes:
             - wordpress:/var/www/html
         networks:
