@@ -1,4 +1,4 @@
-import User from '../modules/user/index';
+import User from '../modules/user/index.tsx';
 
 const UserContent = () => <User />;
 

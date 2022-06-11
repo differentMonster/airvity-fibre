@@ -1,9 +1,8 @@
 import { getNextStaticProps } from '@faustjs/next';
-
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import { CTA, Footer, Header, Hero, Posts } from 'components';
+import { CTA, Footer, Menu, Hero, Posts } from 'components';
 import styles from 'scss/pages/home.module.scss';
 import { client } from 'client';
 
@@ -18,8 +17,8 @@ export default function Page() {
   });
 
   return (
-    <>
-      <Header
+    <React.Fragment>
+      <Menu
         title={generalSettings.title}
         description={generalSettings.description}
       />
@@ -173,7 +172,7 @@ export default function Page() {
         </CTA>
       </main>
       <Footer copyrightHolder={generalSettings.title} />
-    </>
+    </React.Fragment>
   );
 }
 

@@ -52,8 +52,15 @@ Airvity Ecommerce
 
 ### Frontend
 
+Components
+
+-   [ ] nav
+-   [ ] footer
+
 -   [x] nextjs
 -   [x] domain driven design (DDD)
+-   [ ] pages
+    -   landing page
 
 ### Backend
 

@@ -32,7 +32,7 @@ function Hero({
       <div className={styles.wrap}>
         <h1>{title}</h1>
         <div className={styles.intro}>
-          <div className={styles.children}>{children}</div>
+          <div className={styles.children}></div>
           {buttonText && buttonURL && (
             <p>
               <a href={buttonURL} className="button">

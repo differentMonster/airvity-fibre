@@ -1,0 +1,22 @@
+@media (min-width: 1200px) {
+  #homepage-minimal .ps-banner {
+    min-height: 700px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  #homepage-minimal .ps-banner .ps-banner__content {
+    max-width: 1170px;
+  }
+  #homepage-minimal .ps-banner.top .ps-banner__content h3 {
+    font-size: 59px;
+  }
+}
+
+@media (min-width: 992px) {
+  #homepage-minimal .ps-home-product--left .ps-section__left {
+    position: relative;
+    top: -150px;
+    margin-bottom: -150px;
+  }
+}

@@ -1,17 +1,14 @@
 import React from 'react';
 import { client } from 'client';
-import { Header, Hero, Footer } from '../components';
+import { Menu, Hero, Footer } from '../components';
 
 export default function Page(): JSX.Element {
   const { useQuery } = client;
   const generalSettings = useQuery().generalSettings;
 
   return (
-    <>
-      <Header
-        title={generalSettings?.title}
-        description={generalSettings?.description}
-      />
+    <React.Fragment>
+      <Menu />
       <main className="content content-page">
         <Hero title={`Oops! That page can’t be found.`} />
         <div className="wrap">
@@ -26,6 +23,6 @@ export default function Page(): JSX.Element {
         </div>
       </main>
       <Footer copyrightHolder={generalSettings?.title} />
-    </>
+    </React.Fragment>
   );
 }

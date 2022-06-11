@@ -1,0 +1,133 @@
+#homepage-masonry {
+  background-color: #f68773;
+}
+#homepage-masonry .header--fullscreen {
+  top: 20px;
+}
+#homepage-masonry .header--fullscreen.header--sticky {
+  max-width: calc(100% - 40px);
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#homepage-masonry .ps-home-product {
+  background-color: #fff;
+  padding: 100px 15px 0;
+}
+#homepage-masonry .ps-home-product .ps-product .ps-product__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+#homepage-masonry .ps-home-product .ps-product .ps-product__content {
+  padding-top: 30px;
+  text-align: center;
+}
+#homepage-masonry .ps-home-product .ps-section__header {
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+#homepage-masonry .ps-home-product .ps-section__header h5 {
+  color: #f68773;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+#homepage-masonry .ps-home-product .ps-section__header h3 {
+  margin-bottom: 48px;
+  font-size: 36px;
+  color: #222;
+  line-height: 1.1em;
+  max-width: 100%;
+}
+#homepage-masonry .ps-home-product .ps-section__header p {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 0;
+}
+#homepage-masonry .ps-home-product .ps-section__footer {
+  padding-top: 60px;
+}
+@media (min-width: 1200px) {
+  #homepage-masonry .ps-home-product .ps-section__footer {
+    padding-top: 100px;
+  }
+  #homepage-masonry .ps-home-product .ps-section__footer .ps-link--under {
+    font-size: 16px;
+  }
+}
+#homepage-masonry .ps-home-subscribe--center {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+#homepage-masonry .ps-home-subscribe--center h3 {
+  font-size: 24px;
+}
+#homepage-masonry .ps-home-subscribe--center .ps-section__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#homepage-masonry .ps-home-subscribe--center form {
+  max-width: 628px;
+  margin: 0 auto;
+}
+#homepage-masonry .ps-home-subscribe--center form input {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50px;
+  text-indent: 20px;
+}
+#homepage-masonry .ps-home-subscribe--center form i {
+  left: 30px;
+}
+#homepage-masonry .ps-home-subscribe--center form button {
+  right: 30px;
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  #homepage-masonry .ps-home-subscribe--center {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  #homepage-masonry .ps-home-subscribe--center h3 {
+    font-size: 36px;
+  }
+}
+#homepage-masonry .ps-footer--2 {
+  background-color: #fff;
+}
+#homepage-masonry .ps-footer--carousel {
+  border-top: 0;
+  background-color: #fff;
+}
+@media (min-width: 1200px) {
+  #homepage-masonry {
+    padding: 20px;
+  }
+  #homepage-masonry .ps-home-product {
+    padding: 185px 30px 0;
+  }
+  #homepage-masonry .ps-home-product .ps-block--collection {
+    text-align: left;
+    min-height: 910px;
+  }
+  #homepage-masonry .ps-home-product .ps-block--collection.small {
+    min-height: 440px;
+  }
+  #homepage-masonry .ps-home-product .ps-section__header {
+    padding-bottom: 115px;
+  }
+  #homepage-masonry .ps-home-product .ps-section__header h3 {
+    font-size: 72px;
+  }
+  #homepage-masonry .ps-home-product .ps-section__header p {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=home-masonry.css.map */

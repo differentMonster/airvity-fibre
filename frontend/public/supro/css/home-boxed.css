@@ -1,0 +1,30 @@
+#homepage-boxed .ps-page__content {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+#homepage-boxed .ps-home-collection .row {
+  margin: 0 -5px;
+}
+#homepage-boxed .ps-home-collection .row > * {
+  padding: 0 5px;
+}
+
+@media (min-width: 1200px) {
+  #homepage-boxed .ps-home-banner {
+    padding: 0 50px;
+  }
+  #homepage-boxed .ps-home-product .ps-product {
+    margin-bottom: 70px;
+  }
+  #homepage-boxed .ps-home-product .ps-section__header ul {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+  #homepage-boxed .ps-section--partners {
+    padding-top: 120px;
+  }
+}
+
+/*# sourceMappingURL=home-boxed.css.map */

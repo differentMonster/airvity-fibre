@@ -1,4 +1,4 @@
-import Shop from '../modules/shop/index';
+import Shop from '../../modules/shop/index.tsx';
 
 const ShopContent = () => <Shop />;
 
