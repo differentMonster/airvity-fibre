@@ -54,13 +54,13 @@ Airvity Ecommerce
 
 Components
 
--   [ ] nav
--   [ ] footer
+- [X] nav
+- [X] footer
 
--   [x] nextjs
--   [x] domain driven design (DDD)
--   [ ] pages
-    -   landing page
+- [x] nextjs
+- [x] domain driven design (DDD)
+- [X] pages
+  - landing page
 
 ### Backend
 

@@ -26,6 +26,10 @@
   "dependencies": {
     "@faustjs/core": "^0.15.4",
     "@faustjs/next": "^0.15.5",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@popperjs/core": "^2.11.5",
     "@react-three/a11y": "^3.0.0",
     "@react-three/drei": "^9.13.0",

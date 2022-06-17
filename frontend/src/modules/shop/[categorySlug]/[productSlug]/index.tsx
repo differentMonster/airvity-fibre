@@ -6,7 +6,7 @@ import ShopProductHeader from '../../../../components/Shop/ShopProductHeader'
 
 export default function ShopProduct() {
 	const { useQuery } = client
-	const { query } = useRouter()
+	const { query, isReady } = useRouter()
 	const { products } = useQuery()
 	const productSlug = hasCategorySlug(query) ? query.productSlug : undefined
 
@@ -16,17 +16,22 @@ export default function ShopProduct() {
 		},
 	}).nodes
 
-	return (
-		<React.Fragment>
-			<main>
-				<h1>ShopProduct Page</h1>
+	if (!isReady) {
+		return (
+			<div>
+				<h1>Loading...</h1>
+			</div>
+		)
+	}
 
-				{items.map((item) => (
-					<div key={`item.id`}>
-						<ShopProductHeader props={item} />
-					</div>
-				))}
-			</main>
-		</React.Fragment>
+	return (
+		<main>
+			<h1>ShopProduct Page</h1>
+			{items.map((item) => (
+				<React.Fragment key={`item.id`}>
+					<ShopProductHeader props={item} />
+				</React.Fragment>
+			))}
+		</main>
 	)
 }

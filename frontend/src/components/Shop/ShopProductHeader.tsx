@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import React from 'react'
 
 function ShopProductHeader({ props }) {
 	const product = props.$on['SimpleProduct']
@@ -10,7 +11,7 @@ function ShopProductHeader({ props }) {
 					<div className="ps-product__gallery">
 						<div className="col-12 px-md-2 d-none d-md-block">
 							<div className="">
-								<img src={product.image.sourceUrl()} alt="" />
+								<img src={product.image.sourceUrl()} alt={product.description()} />
 							</div>
 						</div>
 					</div>
@@ -60,11 +61,13 @@ function ShopProductHeader({ props }) {
 				<div className="ps-product__specification">
 					<p>
 						<strong>CATEGORY:</strong>
-						{props.productCategories().nodes.map((item) => {
+						{props.productCategories().nodes.map((item, index) => {
 							return (
-								<Link href={`/shop/${item.slug}`}>
-									<a>{item.slug}</a>
-								</Link>
+								<React.Fragment key={index}>
+									<Link href={`/shop/${item.slug}`}>
+										<a>{item.slug}</a>
+									</Link>
+								</React.Fragment>
 							)
 						})}
 					</p>
