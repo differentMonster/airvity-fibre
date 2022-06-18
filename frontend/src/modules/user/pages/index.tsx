@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../scss/pages/user.module.scss';
+import styles from '../../../scss/pages/user.module.scss';
 
 export default function User() {
   return (

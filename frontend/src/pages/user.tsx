@@ -1,5 +1,5 @@
-import User from '../modules/user/index'
+import User from '../modules/user/pages/index';
 
-const UserContent = () => <User />
+const UserContent = () => <User />;
 
-export default UserContent
+export default UserContent;

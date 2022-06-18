@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../scss/pages/cart.module.scss';
+import styles from '../../../scss/pages/cart.module.scss';
 
 export default function Cart() {
   return (

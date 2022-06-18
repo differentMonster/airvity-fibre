@@ -1,4 +1,4 @@
-import Cart from '../modules/cart/index';
+import Cart from '../modules/cart/pages/index';
 
 const CartContent = () => <Cart />;
 

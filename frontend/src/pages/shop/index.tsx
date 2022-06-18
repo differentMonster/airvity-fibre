@@ -1,4 +1,4 @@
-import Shop from '../../modules/shop/index';
+import Shop from '../../modules/shop/pages/index';
 
 const ShopContent = () => <Shop />;
 

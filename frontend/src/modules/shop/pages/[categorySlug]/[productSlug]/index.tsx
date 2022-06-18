@@ -1,7 +1,8 @@
 import { client } from 'client'
 import React from 'react'
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
-import ShopProductHeader from '../../../../components/Shop/ShopProductHeader'
+const ShopProductHeader = dynamic(() => import('../../../components/ShopProductHeader'))
 
 export default function ShopProduct() {
 	const { useQuery } = client
@@ -11,7 +12,7 @@ export default function ShopProduct() {
 
 	const items = products({
 		where: {
-			  slugIn: Array.isArray(productSlug) ? productSlug : [productSlug]
+			slugIn: Array.isArray(productSlug) ? productSlug : [productSlug],
 		},
 	}).nodes
 

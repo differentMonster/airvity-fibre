@@ -42,7 +42,7 @@ function Posts({
               <div>
                 <Heading level={postTitleLevel} className={styles.title}>
                   <Link href={`/posts/${post.slug}`}>
-                    <a>{post.title()}</a>
+                    post.title()
                   </Link>
                 </Heading>
                 <div

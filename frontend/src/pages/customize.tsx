@@ -1,5 +1,5 @@
-import Customize from '../modules/customize/index';
+import Customize from '../modules/customize/pages/index'
 
-const CustomizeContent = () => <Customize />;
+const CustomizeContent = () => <Customize />
 
-export default CustomizeContent;
+export default CustomizeContent

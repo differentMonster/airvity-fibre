@@ -5,8 +5,9 @@ import Link from 'next/link'
 import React, { useCallback } from 'react'
 import { getNextStaticProps, is404 } from '@faustjs/next'
 import { GetStaticPropsContext } from 'next'
-const ShopProductCard = dynamic(() => import('../../../components/Shop/ShopProductCard'))
-import ShopHeader from '../../../components/Shop/ShopHeader'
+const ShopProductCard = dynamic(() => import('../../components/ShopProductCard'))
+
+const ShopHeader = dynamic(() => import('../../components/ShopHeader'))
 
 export function ShopCategoryComponent({ products }): JSX.Element {
 	const { query, isReady } = useRouter()
