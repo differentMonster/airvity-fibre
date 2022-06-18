@@ -1,4 +1,4 @@
-import ShopCategory from '../../../modules/shop/[categorySlug]/index.tsx';
+import ShopCategory from '../../../modules/shop/[categorySlug]/index';
 
 const ShopCategoryContent = () => <ShopCategory />;
 

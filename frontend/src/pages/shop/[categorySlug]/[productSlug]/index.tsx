@@ -1,4 +1,4 @@
-import ShopProduct from '../../../../modules/shop/[categorySlug]/[productSlug]/index.tsx';
+import ShopProduct from '../../../../modules/shop/[categorySlug]/[productSlug]/index';
 
 const ShopProductContent = () => <ShopProduct />;
 

@@ -13,7 +13,6 @@ export function ShopCategoryComponent({ products }): JSX.Element {
 	const router = useRouter()
 	const categorySlug = query.categorySlug
 
-	// pre-render page check
 	if (!isReady) {
 		return (
 			<div>
@@ -55,13 +54,11 @@ export default function ShopCategory() {
 	const { useQuery } = client
 	const { query } = useRouter()
 	const { products } = useQuery()
-	// const categorySlug = hasCategorySlug(query) ? query.categorySlug : undefined
 	const categorySlug = query.categorySlug
-	// const generalSettings = useQuery().generalSettings
 
 	const setProducts = products({
 		where: {
-			categoryIn: categorySlug,
+			categoryIn: Array.isArray(categorySlug) ? categorySlug : [categorySlug],
 		},
 	}).nodes
 

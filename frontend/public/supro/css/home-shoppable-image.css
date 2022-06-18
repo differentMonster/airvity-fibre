@@ -1,9 +1,0 @@
-#homepage-shoppable-image .ps-block--shoppable {
-  margin-bottom: 20px;
-}
-
-@media (min-width: 992px) {
-  #homepage-shoppable-image {
-    padding: 20px;
-  }
-}

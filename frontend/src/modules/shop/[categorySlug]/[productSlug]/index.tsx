@@ -1,18 +1,17 @@
 import { client } from 'client'
 import React from 'react'
 import { useRouter } from 'next/router'
-import { hasCategorySlug } from '@faustjs/next/utils'
 import ShopProductHeader from '../../../../components/Shop/ShopProductHeader'
 
 export default function ShopProduct() {
 	const { useQuery } = client
 	const { query, isReady } = useRouter()
 	const { products } = useQuery()
-	const productSlug = hasCategorySlug(query) ? query.productSlug : undefined
+	const productSlug = query.productSlug
 
 	const items = products({
 		where: {
-			slugIn: productSlug,
+			  slugIn: Array.isArray(productSlug) ? productSlug : [productSlug]
 		},
 	}).nodes
 

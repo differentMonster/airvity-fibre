@@ -1,5 +1,5 @@
-import User from '../modules/user/index.tsx';
+import User from '../modules/user/index'
 
-const UserContent = () => <User />;
+const UserContent = () => <User />
 
-export default UserContent;
+export default UserContent

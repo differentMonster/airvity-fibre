@@ -1,4 +1,4 @@
-import Cart from '../modules/cart/index.tsx';
+import Cart from '../modules/cart/index';
 
 const CartContent = () => <Cart />;
 

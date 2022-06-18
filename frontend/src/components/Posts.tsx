@@ -24,7 +24,6 @@ function Posts({
   readMoreText = 'Read more',
 }: Props): JSX.Element {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <section className={styles['posts-block']} {...(id && { id })}>
       <div className="wrap">
         {heading && (
@@ -48,7 +47,6 @@ function Posts({
                 </Heading>
                 <div
                   className={styles.excerpt}
-                  // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{ __html: post.excerpt() ?? '' }}
                 />
                 <Link href={`/posts/${post.slug}`}>

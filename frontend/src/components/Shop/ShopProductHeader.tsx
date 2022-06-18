@@ -11,7 +11,7 @@ function ShopProductHeader({ props }) {
 					<div className="ps-product__gallery">
 						<div className="col-12 px-md-2 d-none d-md-block">
 							<div className="">
-								<img src={product.image.sourceUrl()} alt={product.description()} />
+								<img className="ps-product__image" src={product.image.sourceUrl()} alt={product.description()} />
 							</div>
 						</div>
 					</div>

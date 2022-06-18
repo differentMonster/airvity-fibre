@@ -1,5 +1,4 @@
 import React from 'react';
-// import styles from 'scss/components/Footer.module.scss'
 
 interface Props {
   copyrightHolder?: string;
