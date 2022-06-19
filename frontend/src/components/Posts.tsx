@@ -41,9 +41,7 @@ function Posts({
             >
               <div>
                 <Heading level={postTitleLevel} className={styles.title}>
-                  <Link href={`/posts/${post.slug}`}>
-                    post.title()
-                  </Link>
+                  <Link href={`/posts/${post.slug}`}>post.title()</Link>
                 </Heading>
                 <div
                   className={styles.excerpt}

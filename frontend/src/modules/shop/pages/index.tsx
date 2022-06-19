@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Styles
 import styles from '../../../scss/pages/shop.module.scss';
 
 export default function Shop() {

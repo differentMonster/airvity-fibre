@@ -5,8 +5,9 @@ import Link from 'next/link'
 import React, { useCallback } from 'react'
 import { getNextStaticProps, is404 } from '@faustjs/next'
 import { GetStaticPropsContext } from 'next'
-const ShopProductCard = dynamic(() => import('../../components/ShopProductCard'))
 
+// Components
+const ShopProductCard = dynamic(() => import('../../components/ShopProductCard'))
 const ShopHeader = dynamic(() => import('../../components/ShopHeader'))
 
 export function ShopCategoryComponent({ products }): JSX.Element {
@@ -25,7 +26,7 @@ export function ShopCategoryComponent({ products }): JSX.Element {
 	return (
 		<React.Fragment>
 			<div className="container-fluid">
-				<ShopHeader />
+				<ShopHeader category={categorySlug}/>
 				<div className="ps-tabs">
 					<div className="ps-tab active">
 						<div className="row row--5-columns">

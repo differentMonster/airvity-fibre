@@ -1,10 +1,12 @@
-import React from 'react';
-import styles from '../../../scss/pages/user.module.scss';
+import React from 'react'
+
+// Styles
+import styles from '../../../scss/pages/user.module.scss'
 
 export default function User() {
-  return (
-    <div className={styles.container}>
-      <h1>User Page</h1>
-    </div>
-  );
+	return (
+		<div className={styles.container}>
+			<h1>User Page</h1>
+		</div>
+	)
 }

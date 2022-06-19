@@ -2,13 +2,18 @@ import { client } from 'client'
 import React from 'react'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
+
+// Components
 const ShopProductHeader = dynamic(() => import('../../../components/ShopProductHeader'))
+const ShopProductRelated = dynamic(() => import('../../../components/ShopProductRelated'))
+const ShopProductBreadcrumbs = dynamic(() => import('../../../components/ShopProductBreadcrumbs'))
 
 export default function ShopProduct() {
 	const { useQuery } = client
 	const { query, isReady } = useRouter()
 	const { products } = useQuery()
 	const productSlug = query.productSlug
+	const categorySlug = query.categorySlug
 
 	const items = products({
 		where: {
@@ -25,13 +30,22 @@ export default function ShopProduct() {
 	}
 
 	return (
-		<main>
-			<h1>ShopProduct Page</h1>
-			{items.map((item) => (
-				<React.Fragment key={`item.id`}>
-					<ShopProductHeader props={item} />
-				</React.Fragment>
-			))}
-		</main>
+		<React.Fragment>
+			<div className="ps-page--default">
+				<div className="ps-page ps-page--product-detail">
+					<div className="container">
+						{items.map((item) => (
+							<React.Fragment key={`item.id`}>
+								<ShopProductBreadcrumbs category={categorySlug} product={productSlug} />
+								<div className="ps-product--detail">
+									<ShopProductHeader props={item} />
+								</div>
+							</React.Fragment>
+						))}
+					</div>
+				</div>
+				<ShopProductRelated />
+			</div>
+		</React.Fragment>
 	)
 }
