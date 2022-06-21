@@ -2,11 +2,15 @@ import { client } from 'client'
 import React from 'react'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
+import shallow from 'zustand/shallow'
 
 // Components
 const ShopProductHeader = dynamic(() => import('../../../components/ShopProductHeader'))
 const ShopProductRelated = dynamic(() => import('../../../components/ShopProductRelated'))
 const ShopProductBreadcrumbs = dynamic(() => import('../../../components/ShopProductBreadcrumbs'))
+
+// Store
+import { useCart } from '../../../../cart/store'
 
 export default function ShopProduct() {
 	const { useQuery } = client
@@ -14,6 +18,8 @@ export default function ShopProduct() {
 	const { products } = useQuery()
 	const productSlug = query.productSlug
 	const categorySlug = query.categorySlug
+
+	// const { cart } = useCart((state) => ({ cart: state.cart }), shallow)
 
 	const items = products({
 		where: {

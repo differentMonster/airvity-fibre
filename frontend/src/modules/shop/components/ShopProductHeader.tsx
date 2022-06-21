@@ -2,9 +2,10 @@ import Link from 'next/link'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function ShopProductHeader({ props }) {
+function ShopProductHeader({ props, addToCart }) {
 	const product = props.$on['SimpleProduct']
 
+	console.log('product:', product)
 	return (
 		<div className="ps-product__header">
 			<div className="ps-product__thumbnail" data-vertical="false">
@@ -48,7 +49,9 @@ function ShopProductHeader({ props }) {
 							<button className="down"></button>
 							<input className="form-control" type="text" defaultValue="1" />
 						</div>
-						<button className="ps-btn ps-btn--black">Add to cart</button>
+						<button className="ps-btn ps-btn--black" onClick={() => addToCart()}>
+							Add to cart
+						</button>
 						<a className="ps-product__favorite" href="#">
 							<i>
 								<FontAwesomeIcon icon={['far', 'heart']} />
