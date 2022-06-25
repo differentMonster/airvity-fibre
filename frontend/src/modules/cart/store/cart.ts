@@ -1,18 +1,38 @@
-import create from 'zustand'
-import { persist } from 'zustand/middleware'
+import create, { StateCreator } from 'zustand'
+import { devtools, persist, PersistOptions } from 'zustand/middleware'
 
+interface CartProduct {
+	product_id: string
+	name: string
+	price: number
+	src: string
+	quantity: number
+}
+
+type CartStore = {
+	total: number
+	totalqty: number
+	cartContent: CartProduct[]
+	clearCart: VoidFunction
+	addToCart: (params: CartProduct) => void
+	removeFromCart: (id: string) => void
+	incrementQuantity: (id: string) => void
+	decrementQuantity: (id: string) => void
+}
+
+type MyPersist = (config: StateCreator<CartStore>, options: PersistOptions<CartStore>) => StateCreator<CartStore>
 /**
  * @productAdded must be search using product_id to match up woocommerce
  */
 const useCart = create(
-	persist(
+	(persist as MyPersist)(
 		(set, get) => ({
 			total: 0,
 			totalqty: 0,
 			cartLength: 0,
 			cartContent: [],
 			// product.price return as string, you need it as number
-			addToCart: (params) => {
+			addToCart: (params: any) => {
 				set((state) => {
 					const product = state.cartContent.find((item) => item.product_id === params.product_id)
 
@@ -46,7 +66,7 @@ const useCart = create(
 			},
 			incrementQuantity: (id) => {
 				set((state) => {
-					const product = state.cartContent.find((item) => item.product_id === id)
+					const product: any = state.cartContent.find((item) => item.product_id === id)
 					if (product) {
 						product.quantity++
 						return {

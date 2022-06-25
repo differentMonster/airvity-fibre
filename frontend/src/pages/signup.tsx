@@ -13,12 +13,11 @@ export interface FormData {
 }
 
 export default function SignUp() {
-	const [registerUser, { data, isLoading, error }] = client.useMutation((mutation, { username, email, password }: FormData) => {
+	const [registerUser, { data, isLoading, error }] = client.useMutation((mutation, { username, email, }: FormData) => {
 		const result = mutation.registerUser({
 			input: {
 				username,
 				email,
-				password,
 			},
 		})
 		console.log('Result', result)
@@ -118,9 +117,9 @@ export default function SignUp() {
 	)
 }
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-	return getNextStaticProps(context, {
-		SignUp,
-		client,
-	})
-}
+// export async function getStaticProps(context: GetStaticPropsContext) {
+// 	return getNextStaticProps(context, {
+// 		SignUp,
+// 		client,
+// 	})
+// }

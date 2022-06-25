@@ -54,7 +54,7 @@ const CheckOutBilling = ({ register, errors }) => {
 					<div className="col-sm-12">
 						<div className="form-group form-group--space">
 							<label>Country </label>
-							<select name="country" className="form-control" id="checkout__form--country" {...register('title')} className={`form-control ${errors.country ? 'is-invalid' : ''}`}>
+							<select name="country" id="checkout__form--country" {...register('title')} className={`form-control ${errors.country ? 'is-invalid' : ''}`}>
 								<option value="">Select</option>
 								<option value="Malaysia">Malaysia</option>
 								<option value="USA">USA</option>

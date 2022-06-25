@@ -48,7 +48,7 @@ export default function CheckOut() {
 	)
 
 	const [mycart, setCart] = useState([])
-	const [mytotal, setTotal] = useState()
+	const [mytotal, setTotal] = useState<number | undefined>()
 
 	useEffect(() => {
 		setCart(cart)
