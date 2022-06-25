@@ -1,7 +1,7 @@
-import React from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { useCart } from '../store'
+import React, { useEffect, useState } from 'react'
+import shallow from 'zustand/shallow'
 
 // Components
 const CartCart = dynamic(() => import('../components/CartCard'))
@@ -11,7 +11,30 @@ const CartCheckOut = dynamic(() => import('../components/CartCheckOut'))
 // Styles
 import styles from '../../../scss/pages/cart.module.scss'
 
+// Store
+import useCart from '../store/cart'
+
 export default function Cart() {
+	const { total, cart, incrementQuantity, decrementQuantity, removeFromCart } = useCart(
+		(state) => ({
+			total: state.total,
+			cart: state.cartContent,
+			incrementQuantity: state.incrementQuantity,
+			decrementQuantity: state.decrementQuantity,
+			removeFromCart: state.removeFromCart,
+		}),
+		shallow
+	)
+
+	const [mycart, setCart] = useState([])
+	const [mytotal, setTotal] = useState()
+
+	useEffect(() => {
+		setCart(cart)
+		setTotal(total)
+	}, [cart, total])
+
+	console.log('mycart:', mycart)
 	return (
 		<div className="ps-page--default">
 			<div className="container">
@@ -32,14 +55,16 @@ export default function Cart() {
 				</div>
 				<div className="ps-page__content">
 					<div className="ps-shopping-cart">
-						<CartCart />
+						<CartCart cart={mycart} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity} removeFromCart={removeFromCart} />
 						<div className="ps-section__content">
 							<CartDiscountCode />
 							<div className="ps-block--checkout-total">
-								<CartCheckOut />
+								<CartCheckOut total={mytotal} />
 								<div className="ps-block__bottom">
 									<div className="ps-btn ps-btn--black">
-										<Link href="/cart/checkout">Proceed to checkout</Link>
+										<Link href="/cart/checkout">
+											<a>Proceed to checkout</a>
+										</Link>
 									</div>
 								</div>
 							</div>

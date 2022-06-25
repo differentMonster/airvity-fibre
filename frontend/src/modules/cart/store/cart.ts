@@ -1,42 +1,76 @@
 import create from 'zustand'
+import { persist } from 'zustand/middleware'
 
-const useCart = create((set) => ({
-	cart: [],
-	addToCart: (id) =>
-		set((state) => {
-			const isPresent = state.cart.find((fruit) => fruit.id === id)
+/**
+ * @productAdded must be search using product_id to match up woocommerce
+ */
+const useCart = create(
+	persist(
+		(set, get) => ({
+			total: 0,
+			totalqty: 0,
+			cartLength: 0,
+			cartContent: [],
+			// product.price return as string, you need it as number
+			addToCart: (params) => {
+				set((state) => {
+					const product = state.cartContent.find((item) => item.product_id === params.product_id)
 
-			if (!isPresent) {
-				return {
-					...state,
-					cart: [...state.cart, { id, count: 1 }],
-				}
-			}
-
-			const updatedCart = state.cart.map((fruit) => (fruit.id === id ? { ...fruit, count: fruit.count + 1 } : fruit))
-
-			return {
-				...state,
-				cart: updatedCart,
-			}
+					if (product) {
+						product.quantity++
+						return {
+							...state,
+							totalqty: state.totalqty + 1,
+							total: state.total + parseFloat(params.price),
+						}
+					} else {
+						return {
+							...state,
+							totalqty: state.totalqty + 1,
+							total: state.total + parseFloat(params.price),
+							cartContent: [...state.cartContent, params],
+						}
+					}
+				})
+			},
+			clearCart: () => set((state) => ({ ...state, cartContent: [], totalqty: 0, total: 0 })),
+			removeFromCart: (id) => {
+				set((state) => {
+					const product = state.cartContent.find((item) => item.product_id === id)
+					return {
+						total: state.total - product.price * product.quantity,
+						totalqty: state.totalqty - product.quantity,
+						cartContent: state.cartContent.filter((item) => item.product_id !== id),
+					}
+				})
+			},
+			incrementQuantity: (id) => {
+				set((state) => {
+					const product = state.cartContent.find((item) => item.product_id === id)
+					if (product) {
+						product.quantity++
+						return {
+							totalqty: state.totalqty + 1,
+							total: state.total + parseFloat(product.price),
+						}
+					}
+				})
+			},
+			decrementQuantity: (id) => {
+				set((state) => {
+					const product = state.cartContent.find((item) => item.product_id === id)
+					if (product.quantity > 1) {
+						product.quantity--
+						return {
+							totalqty: state.totalqty - 1,
+							total: state.total - product.price,
+						}
+					}
+				})
+			},
 		}),
-	removeFromCart: (id) =>
-		set((state) => {
-			const isPresent = state.cart.findIndex((fruit) => fruit.id === id)
+		{ name: 'cart' }
+	)
+)
 
-			if (isPresent === -1) {
-				return {
-					...state,
-				}
-			}
-
-			const updatedCart = state.cart.map((fruit) => (fruit.id === id ? { ...fruit, count: Math.max(fruit.count - 1, 0) } : fruit)).filter((fruit) => fruit.count)
-
-			return {
-				...state,
-				cart: updatedCart,
-			}
-		}),
-}))
-
-export { useCart }
+export default useCart

@@ -1333,9 +1333,9 @@ button.ps-btn:active.ps-btn--black {
     height: 50px;
     border-radius: 0;
     border: 1px solid #ddd;
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    /* -webkit-transition: all 0.4s ease; */
+    /* -o-transition: all 0.4s ease; */
+    /* transition: all 0.4s ease; */
     -webkit-box-shadow: 0 0 0 transparent;
     box-shadow: 0 0 0 transparent;
     background-color: transparent;

@@ -2,10 +2,11 @@ import Link from 'next/link'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function ShopProductHeader({ props, addToCart }) {
-	const product = props.$on['SimpleProduct']
+function ShopProductHeader({ props, addToCart, convertPriceToNumber }) {
+	let { name, id, sku, regularPrice, image, description } = props.$on['SimpleProduct']
 
-	console.log('product:', product)
+	const price = convertPriceToNumber(regularPrice())
+
 	return (
 		<div className="ps-product__header">
 			<div className="ps-product__thumbnail" data-vertical="false">
@@ -13,7 +14,7 @@ function ShopProductHeader({ props, addToCart }) {
 					<div className="ps-product__gallery">
 						<div className="col-12 px-md-2 d-none d-md-block">
 							<div className="">
-								<img className="ps-product__image" src={product.image.sourceUrl()} alt={product.description()} />
+								<img className="ps-product__image" src={image.sourceUrl()} alt={description()} />
 							</div>
 						</div>
 					</div>
@@ -37,11 +38,11 @@ function ShopProductHeader({ props, addToCart }) {
 						</select>
 						<span>1 Review</span>
 					</div>
-					<h2 className="ps-product__title">{product.name}</h2>
-					<span className="ps-product__sku">SKU: {product.sku}</span>
-					<h4 className="ps-product__price">{product.price()}</h4>
+					<h2 className="ps-product__title">{name}</h2>
+					<span className="ps-product__sku">SKU: {sku}</span>
+					<h4 className="ps-product__price">RM {price}</h4>
 				</div>
-				<div className="ps-product__desc">{product.description()}</div>
+				<div className="ps-product__desc">{description()}</div>
 				<div className="ps-product__shopping">
 					<figure>
 						<div className="form-group--number">
@@ -49,7 +50,17 @@ function ShopProductHeader({ props, addToCart }) {
 							<button className="down"></button>
 							<input className="form-control" type="text" defaultValue="1" />
 						</div>
-						<button className="ps-btn ps-btn--black" onClick={() => addToCart()}>
+						<button
+							className="ps-btn ps-btn--black"
+							onClick={() =>
+								addToCart({
+									product_id: id,
+									name: name,
+									price: price,
+									quantity: 1,
+									image: image.sourceUrl(),
+								})
+							}>
 							Add to cart
 						</button>
 						<a className="ps-product__favorite" href="#">

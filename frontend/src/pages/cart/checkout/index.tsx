@@ -1,5 +1,5 @@
-import CheckOut from '../../../modules/cart/pages/checkout'
+import CheckOut from '../../../modules/cart/pages/checkout';
 
-const CheckOutContent = () => <CheckOut />
+const CheckOutContent = () => <CheckOut />;
 
-export default CheckOutContent
+export default CheckOutContent;
