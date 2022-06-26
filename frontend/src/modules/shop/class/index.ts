@@ -1,1 +1,1 @@
-export * from './setShop'
+export * from './setShop';
