@@ -16,6 +16,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../../public/supro/css/style.css';
 import '../../public/supro/css/home-default.css';
 import 'scss/main.scss';
+/* **sweetalert2 */
+import 'sweetalert2/dist/sweetalert2.min.css';
 /* **fontawesome */
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { fab } from '@fortawesome/free-brands-svg-icons';

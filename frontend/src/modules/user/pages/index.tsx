@@ -1,32 +1,32 @@
-import React from 'react'
-import { client } from 'client'
+import React from 'react';
+import { client } from 'client';
 
 // Styles
-import styles from '../../../scss/pages/user.module.scss'
+import styles from '../../../scss/pages/user.module.scss';
 
 export default function User() {
-	const { useAuth, useClient, useQuery } = client?.auth
-	const { isLoading: isAuthLoading, isAuthenticated } = useAuth()
-	const viewer = useQuery()?.viewer
+  const { useAuth, useClient, useQuery } = client?.auth;
+  const { isLoading: isAuthLoading, isAuthenticated } = useAuth();
+  const viewer = useQuery()?.viewer;
 
-	if (isAuthLoading) {
-		return <div>Loading...</div>
-	}
+  if (isAuthLoading) {
+    return <div>Loading...</div>;
+  }
 
-	if (!isAuthenticated) {
-		return <div>You are not Authenticated!</div>
-	}
+  if (!isAuthenticated) {
+    return <div>You are not Authenticated!</div>;
+  }
 
-	return (
-		<div className={styles.container}>
-			<h1>User Page</h1>
-			<div>Authenticated Success</div>
-			<div>First Name: {viewer?.firstName}</div>
-			<div>Last Name: {viewer?.lastName}</div>
-			<div>ID: {viewer?.id}</div>
-			<div>Email: {viewer?.email}</div>
-		</div>
-	)
+  return (
+    <div className={styles.container}>
+      <h1>User Page</h1>
+      <div>Authenticated Success</div>
+      <div>First Name: {viewer?.firstName}</div>
+      <div>Last Name: {viewer?.lastName}</div>
+      <div>ID: {viewer?.id}</div>
+      <div>Email: {viewer?.email}</div>
+    </div>
+  );
 }
 
 // import React, { useState } from 'react'

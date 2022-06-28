@@ -54,13 +54,13 @@ Airvity Ecommerce
 
 Components
 
-- [X] nav
-- [X] footer
+-   [x] nav
+-   [x] footer
 
-- [x] nextjs
-- [x] domain driven design (DDD)
-- [X] pages
-  - landing page
+-   [x] nextjs
+-   [x] domain driven design (DDD)
+-   [x] pages
+    -   landing page
 
 ### Backend
 
@@ -68,6 +68,10 @@ Components
 -   [x] Faustjs
 -   [x] woocommerce
 
+## Tasks
+
+-   TODO register build with registerUser and useState
+
 ## Deadline
 
-30 days
+7/20/2022
